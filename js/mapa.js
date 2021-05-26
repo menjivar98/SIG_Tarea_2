@@ -116,7 +116,8 @@ legend.onAdd = function (map) {
 legend.addTo(map);
 
 L.control.layers(baseMaps, overlayMaps,{
-    position: 'topleft'
+    position: 'topleft',
+    collapsed:false
 }).addTo(map);
 L.control.scale().addTo(map)
 
