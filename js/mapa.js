@@ -106,6 +106,15 @@ var title = L.control();
 
 title.addTo(map)
 
+var legend = L.control({position: 'bottomright'});
+legend.onAdd = function (map) {
+ var div = L.DomUtil.create('div', 'info legend');
+ div.innerHTML +=
+ '<img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2018/04/soy-leyenda_0.jpg?itok=NS58nujY" alt="legend" width="101" height="120">';
+ return div;
+};
+legend.addTo(map);
+
 L.control.layers(baseMaps, overlayMaps,{
     position: 'topleft'
 }).addTo(map);
