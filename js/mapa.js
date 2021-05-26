@@ -10,66 +10,89 @@ osm.addTo(map);
 
 var rios = L.tileLayer.wms("http://localhost:8080/geoserver/wms",{
     layers: "cite:rios",
-    transparent: true
+    format: 'image/png',
+    transparent: true,
 })
 
 var lagos = L.tileLayer.wms("http://localhost:8080/geoserver/wms",{
     layers: "cite:lagos",
     transparent: true,
+    format: 'image/png',
     
 })
 
 var areas_protegidas = L.tileLayer.wms("http://localhost:8080/geoserver/wms",{
     layers: "cite:areas_protegidas",
     transparent: true,
+    format: 'image/png',
     
 })
 
 var cerros = L.tileLayer.wms("http://localhost:8080/geoserver/wms",{
     layers: "cite:cerros",
     transparent: true,
+    format: 'image/png',
     
 })
 
 var departamentos = L.tileLayer.wms("http://localhost:8080/geoserver/wms",{
     layers: "cite:departamentos",
     transparent: true,
+    format: 'image/png',
     
 })
 
 var escuelas = L.tileLayer.wms("http://localhost:8080/geoserver/wms",{
     layers: "cite:escuelas",
     transparent: true,
+    format: 'image/png',
     
 })
 
 var montanas = L.tileLayer.wms("http://localhost:8080/geoserver/wms",{
     layers: "cite:montanas",
     transparent: true,
+    format: 'image/png',
     
 })
 
 var red_vial = L.tileLayer.wms("http://localhost:8080/geoserver/wms",{
     layers: "cite:red_vial",
     transparent: true,
+    format: 'image/png',
     
 })
 
 var volcanes = L.tileLayer.wms("http://localhost:8080/geoserver/wms",{
     layers: "cite:volcanes",
     transparent: true,
+    format: 'image/png',
     
 })
 
-
+var municipios = L.tileLayer.wms("http://localhost:8080/geoserver/wms",{
+    layers: "cite:municipios",
+    transparent: true,
+    format: 'image/png',
+    
+})
 
 var baseMaps = {
     "OSM":osm
 }
 
 var overlayMaps = {
+    "departamentos":departamentos,
+    "municipios":municipios,
     "rios":rios,
-    "lagos":lagos
+    "lagos":lagos,
+    "areas_protegidas":areas_protegidas,
+    "cerros":cerros,
+    "escuelas":escuelas,
+    "montanas":montanas,
+    "red_vial":red_vial,
+    "volcanes":volcanes
+
 
 }
 
